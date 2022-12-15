@@ -60,10 +60,10 @@ const hideEdit = (num) => {
 <input type="hidden" name="num" value="${vo.num }">
 <tr>
 <td style="display:none">${vo.num }</td>
-<td><%-- <input type="text" name="sitterId" value="${vo.sitter_id }" readonly> --%>
+<td>
 ${vo.sitter_id }
 </td>
-<td><%-- <input type="text" name="userId" value="${vo.user_id }"> --%>
+<td>
 <input text="text" name="userId" value="${vo.user_id }">
 </td>
 <td>${vo.review_date }</td>
@@ -75,7 +75,6 @@ ${vo.sitter_id }
 <td>
 <input type="button" id="edit${vo.num }" value="수정하기" onclick="editReview(${vo.num })">
 <input type="button" id="del${vo.num }" value="삭제하기" onclick="javascript:location.href='${pageContext.request.contextPath }/DispatcherServlet?url=/review/del&num=${vo.num }&&userId=${vo.user_id }'">
-<%-- <input type="submit" id="submit${vo.num }" value="수정완료" style="display:none" onclick="javascript:location.href='${pageContext.request.contextPath }/DispatcherServlet?url=/review/edit&num=${vo.num }'"> --%>
 <input type="submit" id="submit${vo.num }" value="수정완료" style="display:none">
 <input type="button" id="cancel${vo.num }" value="수정취소" style="display:none" onclick="hideEdit(${vo.num })">
 </td>
